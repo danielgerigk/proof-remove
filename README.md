@@ -4,7 +4,7 @@ A script that takes a LaTeX file and filters out all sections of the form `\begi
 Usage: `proof-remove file.tex`  
 The result is printed to `stdout`, while error messages go to `stderr`.
 
-There exist several LaTeX-packages that include the same functionality:
+There exist at least two LaTeX-packages that include the same functionality:
 
 1. The [comment](https://ctan.org/pkg/comment)-package (via `excludecomment`)
 2. The [versions](https://ctan.org/pkg/versions)-package (via `excludeversion`)
