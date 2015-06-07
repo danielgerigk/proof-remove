@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+import sys
+
+if len(sys.argv) != 2:
+    sys.exit("[ERROR] Bad parameter(s)")
+
+text = ""
+
+try:
+    file = open(sys.argv[1])
+    text = file.read()
+except IOError:
+    sys.exit("[ERROR] Could not read file \"" + fname + "\"")
+else:
+    file.close()
+
+while True:
+    a = text.find("\\begin{proof}")
+    b = text.find("\\end{proof}")
+    if a == -1 and b == -1:
+        break
+    if a == -1 or b == -1 or a>b or text.find("\\begin{proof}",a+1,b) != -1:
+        sys.exit("[ERROR] Bad structure")
+    text = text[:a] + text[b+11:]
+
+print(text,end="")
