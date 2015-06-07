@@ -1,5 +1,9 @@
 #### proof-remove
-A script that filters all sections of the form `\begin{proof} ... \end{proof}` out of a LaTeX file.
+A script that takes a LaTeX file and filters out all sections of the form `\begin{proof} ... \end{proof}`.
+
+Usage: `proof-remove file.tex`
+
+The result is printed to stdout, while error messages go to stderr.
 
 **[UPDATE]** There already exist several LaTeX-packages that have the same functionality:
 
