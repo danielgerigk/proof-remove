@@ -10,7 +10,7 @@ fname = sys.argv[1]
 text = ""
 
 try:
-    file = open(fname)
+    file = open(fname, encoding='utf-8')
     text = file.read()
 except IOError:
     sys.exit("[ERROR] Could not read file \"" + fname + "\"")
